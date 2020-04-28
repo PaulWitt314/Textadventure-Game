@@ -24,12 +24,20 @@ namespace Textadventure_Paul_Witt
         {
             InitializeComponent();
         }
-
+        /// <summary>
+        /// Game Schließen
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ExitGameBtn_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
         }
-
+        /// <summary>
+        /// Neues Spiel starten
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void NewGameBtn_Click(object sender, RoutedEventArgs e)
         {
             Window Game = new MainGame();

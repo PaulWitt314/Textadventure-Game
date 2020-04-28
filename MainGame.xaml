@@ -17,12 +17,14 @@
             <ColumnDefinition/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
+        <!--Buttons für Steuerung-->
         <Button x:Name="Btn1" Grid.Row="2" Width="150" Height="25"  Margin="0,0,0,50" BorderBrush="Black"/>
         <Button x:Name="Btn3" Grid.Row="2" Width="150" Height="25"  Margin="0,50,0,0" BorderBrush="Black"/>
         <Button x:Name="Btn2" Grid.Row="2" Grid.Column="1" Width="150" Height="25"  Margin="0,0,0,50" BorderBrush="Black"/>
         <Button x:Name="Btn4" Grid.Row="2" Grid.Column="1" Width="150" Height="25"  Margin="0,50,0,0" BorderBrush="Black" Click="Btn4_Click"/>
         <Button x:Name="InventoryBtn" Grid.Row="2" Grid.Column="2" Width="150" Height="25"  Margin="0,0,0,50" Content="Inventar" BorderBrush="Black"/>
         <Button x:Name="MenuBtn" Grid.Row="2" Grid.Column="2" Width="150" Height="25"  Margin="0,50,0,0" Content="Menü" BorderBrush="Black" Click="MenuBtn_Click"/>
+        <!--Textbox-->
         <TextBox x:Name="TextBox" Grid.Row="1" Grid.ColumnSpan="3" BorderThickness="3" BorderBrush="Black" IsReadOnly="True" Background="Gray"/>
     </Grid>
 </Window>

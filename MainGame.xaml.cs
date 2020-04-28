@@ -24,7 +24,11 @@ namespace Textadventure_Paul_Witt
         {
             InitializeComponent();
         }
-
+        /// <summary>
+        /// Button 4 Schließung des Games,Ausführung,Inventar Gegenstand
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Btn4_Click(object sender, RoutedEventArgs e)
         {
             if (Convert.ToString(Btn4.Content) == "Schließen")
@@ -32,7 +36,11 @@ namespace Textadventure_Paul_Witt
                 this.Close();
             }
         }
-
+        /// <summary>
+        /// Buttons ins Menü umwandeln
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void MenuBtn_Click(object sender, RoutedEventArgs e)
         {
             if(Convert.ToString(MenuBtn.Content) == "Menü")
