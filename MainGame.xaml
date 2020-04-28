@@ -1,0 +1,28 @@
+﻿<Window x:Class="Textadventure_Paul_Witt.MainGame"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Textadventure_Paul_Witt"
+        mc:Ignorable="d"
+        Title="  Textadventure Paul Witt" WindowStyle="ToolWindow" ResizeMode="NoResize" WindowState="Maximized" Background="Gray">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="150" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Button x:Name="Btn1" Grid.Row="2" Width="150" Height="25"  Margin="0,0,0,50" BorderBrush="Black"/>
+        <Button x:Name="Btn3" Grid.Row="2" Width="150" Height="25"  Margin="0,50,0,0" BorderBrush="Black"/>
+        <Button x:Name="Btn2" Grid.Row="2" Grid.Column="1" Width="150" Height="25"  Margin="0,0,0,50" BorderBrush="Black"/>
+        <Button x:Name="Btn4" Grid.Row="2" Grid.Column="1" Width="150" Height="25"  Margin="0,50,0,0" BorderBrush="Black" Click="Btn4_Click"/>
+        <Button x:Name="InventoryBtn" Grid.Row="2" Grid.Column="2" Width="150" Height="25"  Margin="0,0,0,50" Content="Inventar" BorderBrush="Black"/>
+        <Button x:Name="MenuBtn" Grid.Row="2" Grid.Column="2" Width="150" Height="25"  Margin="0,50,0,0" Content="Menü" BorderBrush="Black" Click="MenuBtn_Click"/>
+        <TextBox x:Name="TextBox" Grid.Row="1" Grid.ColumnSpan="3" BorderThickness="3" BorderBrush="Black" IsReadOnly="True" Background="Gray"/>
+    </Grid>
+</Window>

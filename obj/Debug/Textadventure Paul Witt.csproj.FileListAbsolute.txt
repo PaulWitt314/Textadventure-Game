@@ -1,0 +1,17 @@
+C:\Users\therr\Desktop\Textadventure Paul Witt\bin\Debug\Textadventure Paul Witt.exe.config
+C:\Users\therr\Desktop\Textadventure Paul Witt\bin\Debug\Textadventure Paul Witt.exe
+C:\Users\therr\Desktop\Textadventure Paul Witt\bin\Debug\Textadventure Paul Witt.pdb
+C:\Users\therr\Desktop\Textadventure Paul Witt\obj\Debug\Textadventure Paul Witt.csprojAssemblyReference.cache
+C:\Users\therr\Desktop\Textadventure Paul Witt\obj\Debug\MainWindow.g.cs
+C:\Users\therr\Desktop\Textadventure Paul Witt\obj\Debug\App.g.cs
+C:\Users\therr\Desktop\Textadventure Paul Witt\obj\Debug\Textadventure Paul Witt_MarkupCompile.cache
+C:\Users\therr\Desktop\Textadventure Paul Witt\obj\Debug\Textadventure Paul Witt_MarkupCompile.lref
+C:\Users\therr\Desktop\Textadventure Paul Witt\obj\Debug\MainWindow.baml
+C:\Users\therr\Desktop\Textadventure Paul Witt\obj\Debug\Textadventure Paul Witt.g.resources
+C:\Users\therr\Desktop\Textadventure Paul Witt\obj\Debug\Textadventure_Paul_Witt.Properties.Resources.resources
+C:\Users\therr\Desktop\Textadventure Paul Witt\obj\Debug\Textadventure Paul Witt.csproj.GenerateResource.cache
+C:\Users\therr\Desktop\Textadventure Paul Witt\obj\Debug\Textadventure Paul Witt.csproj.CoreCompileInputs.cache
+C:\Users\therr\Desktop\Textadventure Paul Witt\obj\Debug\Textadventure Paul Witt.exe
+C:\Users\therr\Desktop\Textadventure Paul Witt\obj\Debug\Textadventure Paul Witt.pdb
+C:\Users\therr\Desktop\Textadventure Paul Witt\obj\Debug\MainGame.g.cs
+C:\Users\therr\Desktop\Textadventure Paul Witt\obj\Debug\MainGame.baml
