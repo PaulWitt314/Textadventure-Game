@@ -36,6 +36,22 @@ namespace Textadventure_Paul_Witt
                 this.Close();
             }
         }
+
+        private void HealthChange(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
+            if(HealthPB.Value > 74)
+            {
+                HealthPB.Foreground = System.Windows.Media.Brushes.Green;
+            }
+            else if(HealthPB.Value > 24)
+            {
+                HealthPB.Foreground = System.Windows.Media.Brushes.Yellow;
+            }
+            else
+            {
+                HealthPB.Foreground = System.Windows.Media.Brushes.Red;
+            }
+        }
         /// <summary>
         /// Buttons ins Menü umwandeln
         /// </summary>

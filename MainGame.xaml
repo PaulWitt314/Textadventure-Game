@@ -9,7 +9,7 @@
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition/>
-            <RowDefinition Height="100"/>
+            <RowDefinition Height="25"/>
             <RowDefinition Height="150" />
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
@@ -25,6 +25,8 @@
         <Button x:Name="InventoryBtn" Grid.Row="2" Grid.Column="2" Width="150" Height="25"  Margin="0,0,0,50" Content="Inventar" BorderBrush="Black"/>
         <Button x:Name="MenuBtn" Grid.Row="2" Grid.Column="2" Width="150" Height="25"  Margin="0,50,0,0" Content="Menü" BorderBrush="Black" Click="MenuBtn_Click"/>
         <!--Textbox-->
-        <TextBox x:Name="TextBox" Grid.Row="1" Grid.ColumnSpan="3" BorderThickness="3" BorderBrush="Black" IsReadOnly="True" Background="Gray"/>
+        <TextBox x:Name="TextBox" Grid.Row="0" Grid.RowSpan="2" Grid.ColumnSpan="3" IsReadOnly="True" Background="Black" Foreground="White" BorderThickness="0"/>
+        <ProgressBar x:Name="HealthPB"  Height="25" VerticalAlignment="Center"  Grid.Row="1" Grid.ColumnSpan="3" Minimum="0" Maximum="100" Value="100" Foreground="Green" ValueChanged="HealthChange" />
+        <TextBlock Text="{Binding ElementName=HealthPB , Path=Value,StringFormat={}{0:0}%}" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Center" TextAlignment="Center" VerticalAlignment="Center"/>
     </Grid>
 </Window>
