@@ -19,10 +19,15 @@ namespace Textadventure_Paul_Witt
     /// </summary>
     public partial class MainGame : Window
     {
-        string btn3 = "", btn4 = "";
+        string btn1content, btn2content,btn3content,btn4content,btn5content;
+        int Dmg = 10, DmgFireball= 15;
+        int SpellNumber = 2,HealthPotion =5;
+        int Armor = 4;
+        int DmgEnemie, ArmorEnemie;
         public MainGame()
         {
             InitializeComponent();
+            FightSystem("Goblin", 5, 4, 100);
         }
 
         /// <summary>
@@ -53,23 +58,63 @@ namespace Textadventure_Paul_Witt
             }
         }
 
-        private void Btn1_Click(object sender, RoutedEventArgs e)
+        private void HealthEnemieChange(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
-
+            if (HealtEnemiPB.Value > 74)
+            {
+                HealtEnemiPB.Foreground = System.Windows.Media.Brushes.Green;
+            }
+            else if (HealtEnemiPB.Value > 24)
+            {
+                HealtEnemiPB.Foreground = System.Windows.Media.Brushes.Yellow;
+            }
+            else if(HealtEnemiPB.Value>0)
+            {
+                HealtEnemiPB.Foreground = System.Windows.Media.Brushes.Red;
+            }
+            else
+            {
+                HealtEnemiPB.Maximum = 100;
+                HealtEnemiPB.Value =0;
+                EnemieNameLBL.Content = "";
+                Btn1.Content = btn1content; 
+                Btn2.Content = btn2content;
+                Btn3.Content = btn3content;
+                Btn4.Content = btn4content;
+                Btn5.Content = btn5content;
+            }
         }
 
-        private void Btn2_Click(object sender, RoutedEventArgs e)
+        private void Btn1_Click(object sender, RoutedEventArgs e)
         {
+            if(Convert.ToString( Btn1.Content) == "Angriff")
+            {
+                HealtEnemiPB.Value -= Dmg;
+                HealthPB.Value -= DmgEnemie;
+            }
+        }
 
+        public void Btn2_Click(object sender, RoutedEventArgs e)
+        {
+            if (Convert.ToString(Btn2.Content) == "Feuerball" && SpellNumber>0)
+            {
+                HealtEnemiPB.Value -= DmgFireball;
+                SpellNumber--;
+                HealthPB.Value -= DmgEnemie;
+            }
         }
 
         private void Btn3_Click(object sender, RoutedEventArgs e)
         {
-
+            if (Convert.ToString(Btn3.Content) == "Heiltrank" &&HealthPotion>0)
+            {
+                HealthPB.Value += 15;
+                HealthPotion--;
+            }
         }
 
         /// <summary>
-        /// Button 4 Schließung des Games,Ausführung,Inventar Gegenstand
+        /// Button 4 Schließung des Games,Ausführung,Rennen
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -79,11 +124,18 @@ namespace Textadventure_Paul_Witt
             {
                 this.Close();
             }
+            else if (Convert.ToString(Btn4.Content) == "Information")
+            {
+                
+            }
         }
 
-        private void InventoryBtn_Click(object sender, RoutedEventArgs e)
+        private void Btn5_Click(object sender, RoutedEventArgs e)
         {
-
+            if (Convert.ToString(Btn5.Content) == "Rennen")
+            {
+                
+            }
         }
 
         /// <summary>
@@ -95,11 +147,11 @@ namespace Textadventure_Paul_Witt
         {
             if(Convert.ToString(MenuBtn.Content) == "Menü")
             {
-                btn3 = Convert.ToString(Btn3.Content);
-                btn4 = Convert.ToString(Btn4.Content);
+                btn3content = Convert.ToString(Btn3.Content);
+                btn4content = Convert.ToString(Btn4.Content);
                 Btn1.Visibility = Visibility.Collapsed;
-                Btn2.Visibility = Visibility.Collapsed; 
-                InventoryBtn.Visibility = Visibility.Collapsed;
+                Btn2.Visibility = Visibility.Collapsed;  
+                Btn5.Visibility = Visibility.Collapsed;
                 Btn3.Content = "Speichern";
                 Btn4.Content = "Schließen";
                 MenuBtn.Content = "Zurück";
@@ -108,11 +160,33 @@ namespace Textadventure_Paul_Witt
             {
                 Btn1.Visibility = Visibility.Visible;
                 Btn2.Visibility = Visibility.Visible;
-                InventoryBtn.Visibility = Visibility.Visible;
-                Btn3.Content = btn3;
-                Btn4.Content = btn4;
+                Btn5.Visibility = Visibility.Visible;
+                Btn3.Content = btn3content;
+                Btn4.Content = btn4content;
                 MenuBtn.Content = "Menü";
             }
+        }
+        /// <summary>
+        /// Fight System
+        /// </summary>
+        /// <param name="HealthEnemie"></param>
+        public void FightSystem(string EnemieName, int DmgEnemie1, int ArmorEnemie1, int HealthEnemie)
+        {
+            btn1content = Convert.ToString(Btn1.Content);
+            btn2content = Convert.ToString(Btn2.Content);
+            btn3content = Convert.ToString(Btn3.Content);
+            btn4content = Convert.ToString(Btn4.Content);
+            btn5content = Convert.ToString(Btn5.Content);
+            Btn1.Content = "Angriff";
+            Btn2.Content = "Feuerball";
+            Btn3.Content = "Heiltrank";
+            Btn4.Content = "Information";
+            Btn5.Content = "Rennen";
+            DmgEnemie = DmgEnemie1;
+            ArmorEnemie = ArmorEnemie1;
+            HealtEnemiPB.Maximum = HealthEnemie;
+            HealtEnemiPB.Value = HealthEnemie;
+            EnemieNameLBL.Content = EnemieName;
         }
     }
 }
